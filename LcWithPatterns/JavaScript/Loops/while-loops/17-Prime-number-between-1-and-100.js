@@ -12,7 +12,7 @@ while (n <= 100) { // Loop through numbers from 2 to 100
         i++; // Increment the divisor
     }
     if (isPrime) {
-        console.log(n); // Print the prime number
+        console.log(n);
     }
     n++; // Increment the number to check for the next prime
 }
