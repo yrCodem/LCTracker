@@ -13,7 +13,7 @@ while (i < n){
     if (n % i === 0){ // Check if i is a divisor of n
         sum = sum + i; // Add the divisor to sum
     }
-    i++; // Increment the divisor
+    i++; 
 }
 if (sum === n){
     console.log(`${n} is a perfect number.`);
