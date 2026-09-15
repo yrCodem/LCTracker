@@ -12,7 +12,7 @@ while (n <= 100) { // Loop through numbers from 2 to 100
         if (n % i === 0){ // Check if n is divisible by i
             isPrime = false;
     }
-    i++; // Increment the divisor
+    i++;
     }
     if (isPrime) {
         console.log(n);
