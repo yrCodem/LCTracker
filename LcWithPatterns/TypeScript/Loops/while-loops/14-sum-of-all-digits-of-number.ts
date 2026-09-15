@@ -3,7 +3,7 @@
 export {}
 
 let num: number = 7897493; // You can change this number to find the sum of digits of any other number
-let sum: number = 0; // Initialize sum to 0
+let sum: number = 0; 
 
 while (num > 0){
     let digit: number = num % 10; // Get the last digit
