@@ -75,7 +75,7 @@ function maximumWeight(intervals: number[][]): number[] {
         } else if (skipResult.weight > pickWeight) {
             bestState = { weight: skipResult.weight, indices: skipResult.indices };
         } else {
-            // Weights are tied, apply lexicographical rules
+           
             if (isLexicographicallySmaller(pickIndices, skipResult.indices)) {
                 bestState = { weight: pickWeight, indices: pickIndices };
             } else {
