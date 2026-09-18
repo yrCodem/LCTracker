@@ -65,7 +65,6 @@ function maximumWeight(intervals: number[][]): number[] {
         const pickResult = solve(nextIdx, count - 1);
         
         const pickWeight = items[i].weight + pickResult.weight;
-        // Merge current index into sorted path
         const pickIndices = [items[i].id, ...pickResult.indices].sort((a, b) => a - b);
 
         let bestState: DPState;
