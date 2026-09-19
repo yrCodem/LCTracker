@@ -6,7 +6,7 @@ interface DPState {
 function maximumWeight(intervals: number[][]): number[] {
     const n = intervals.length;
     
-    // 1. Structure the items with their original indices and sort by start time
+    
     // If start times match, we sort by end time, though start time is the primary key for our DP.
     const items = intervals.map((inv, idx) => ({
         start: inv[0],
