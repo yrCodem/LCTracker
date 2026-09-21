@@ -4,7 +4,7 @@ export {}
 
 let n: number = 10;
 let i: number = 1
-let sum : number = 0;  // total starts from 0 as no number is added yet
+let sum : number = 0;  
 
 while (i <= n){    // Keep going until i becomes greater than n
     if (i % 2 === 0){   // Check if the number is even
