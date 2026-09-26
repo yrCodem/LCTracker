@@ -15,8 +15,6 @@
 
 // Output: 3
 
-// Explanation:
-
 // The numbers "1,000", "1,001", and "1,002" each contain one comma, giving a total of 3.
 
 // Example 2:
