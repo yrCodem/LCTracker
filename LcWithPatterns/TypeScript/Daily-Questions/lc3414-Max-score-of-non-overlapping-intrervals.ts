@@ -2,7 +2,6 @@ interface DPState {
     weight: number;
     indices: number[];
 }
-
 function maximumWeight(intervals: number[][]): number[] {
     const n = intervals.length;
     
