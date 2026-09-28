@@ -8,6 +8,6 @@ let reversedNum: number = 0; // Start with 0 as the reversed number
 while (num > 0){
     let digit: number = num % 10
     reversedNum = reversedNum * 10 + digit; // Old reversed number * 10 + current digit
-    num = Math.floor(num / 10); // Remove the last digit from the number
+    num = Math.floor(num / 10); 
 }
 console.log(`The reversed value is: ${reversedNum}`);
