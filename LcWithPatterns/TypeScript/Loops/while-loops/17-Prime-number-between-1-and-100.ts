@@ -17,5 +17,5 @@ while (n <= 100) { // Loop through numbers from 2 to 100
     if (isPrime) {
         console.log(n);
     }
-    n++; // Increment the number to check for the next prime
+    n++; 
 }
