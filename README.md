@@ -7,7 +7,7 @@ The project allows you to write solutions in **TypeScript** and automatically ge
 - 🟦 JavaScript
 - 🐍 Python
 
-This creates a structured environment for practicing DSA while comparing syntax, data structures, and approaches across languages.
+This creates a structured environment for practicing DSA while comparing syntax, data structures, and approaches across languages
 
 ---
 
