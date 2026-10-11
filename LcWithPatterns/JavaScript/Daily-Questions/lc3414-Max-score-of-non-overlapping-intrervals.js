@@ -1,7 +1,6 @@
 "use strict";
 function maximumWeight(intervals) {
     const n = intervals.length;
-    // 1. Structure the items with their original indices and sort by start time
     // If start times match, we sort by end time, though start time is the primary key for our DP.
     const items = intervals.map((inv, idx) => ({
         start: inv[0],
@@ -52,7 +51,6 @@ function maximumWeight(intervals) {
         const nextIdx = nextValid[i];
         const pickResult = solve(nextIdx, count - 1);
         const pickWeight = items[i].weight + pickResult.weight;
-        // Merge current index into sorted path
         const pickIndices = [items[i].id, ...pickResult.indices].sort((a, b) => a - b);
         let bestState;
         if (pickWeight > skipResult.weight) {
@@ -62,7 +60,6 @@ function maximumWeight(intervals) {
             bestState = { weight: skipResult.weight, indices: skipResult.indices };
         }
         else {
-            // Weights are tied, apply lexicographical rules
             if (isLexicographicallySmaller(pickIndices, skipResult.indices)) {
                 bestState = { weight: pickWeight, indices: pickIndices };
             }
