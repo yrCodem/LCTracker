@@ -9,7 +9,7 @@ while (n <= 100) { // Loop through numbers from 2 to 100
     let isPrime: boolean = true
     let i: number = 2 // Initialize the divisor to 2
     while (i < n){
-        if (n % i === 0){ // Check if n is divisible by i
+        if (n % i === 0){ 
             isPrime = false;
     }
     i++;
