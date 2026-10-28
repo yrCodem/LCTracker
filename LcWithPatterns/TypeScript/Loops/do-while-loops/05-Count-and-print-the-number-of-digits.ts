@@ -2,7 +2,7 @@
 
 export{}
 
-let num: number = 4567476878
+let num: number = 45674768
 let count: number = 0
 
 do{
