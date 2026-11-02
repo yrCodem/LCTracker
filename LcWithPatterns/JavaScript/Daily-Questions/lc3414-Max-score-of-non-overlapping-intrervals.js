@@ -1,7 +1,6 @@
 "use strict";
 function maximumWeight(intervals) {
     const n = intervals.length;
-    // If start times match, we sort by end time, though start time is the primary key for our DP.
     const items = intervals.map((inv, idx) => ({
         start: inv[0],
         end: inv[1],

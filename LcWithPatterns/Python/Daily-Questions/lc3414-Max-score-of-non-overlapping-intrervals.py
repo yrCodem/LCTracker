@@ -1,13 +1,10 @@
-import bisect
 from typing import List
+import bisect
 
 class DPState:
     def __init__(self, weight: int, indices: List[int]):
         self.weight = weight
         self.indices = indices
-
-class Solution:
-    pass
 
 def maximumWeight(intervals: List[List[int]]) -> List[int]:
     n = len(intervals)
@@ -24,17 +21,24 @@ def maximumWeight(intervals: List[List[int]]) -> List[int]:
     items.sort(key=lambda x: (x['start'], x['end']))
 
     nextValid = [0] * n
-    starts = [item['start'] for item in items]
     for i in range(n):
         target = items[i]['end']
-        low = bisect.bisect_right(starts, target, i + 1, n)
+        low = i + 1
+        high = n
+        
+        while low < high:
+            mid = (low + high) >> 1
+            if items[mid]['start'] > target:
+                high = mid
+            else:
+                low = mid + 1
         nextValid[i] = low
 
     memo = [[None] * 5 for _ in range(n)]
 
     def isLexicographicallySmaller(a: List[int], b: List[int]) -> bool:
-        len_val = min(len(a), len(b))
-        for i in range(len_val):
+        length = min(len(a), len(b))
+        for i in range(length):
             if a[i] != b[i]:
                 return a[i] < b[i]
         return len(a) < len(b)
