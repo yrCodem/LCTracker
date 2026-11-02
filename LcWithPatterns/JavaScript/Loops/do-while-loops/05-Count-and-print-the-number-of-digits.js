@@ -1,7 +1,7 @@
 "use strict";
-// Count and print the number of digits in the given number. 
+// Count and print the number of digits in the given number
 Object.defineProperty(exports, "__esModule", { value: true });
-let num = 4567476878;
+let num = 45674768;
 let count = 0;
 do {
     count++;
