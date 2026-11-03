@@ -25,7 +25,7 @@ function search(nums: number[], target: number): number {
             if (nums[mid] < target && target <= nums[right]) {
                 left = mid + 1;  // Search right
             } else {
-                right = mid - 1; // Search left
+                right = mid - 1 // Search left
             }
         }
     }
