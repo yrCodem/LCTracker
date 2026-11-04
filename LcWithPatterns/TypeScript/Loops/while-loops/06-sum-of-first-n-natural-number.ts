@@ -8,5 +8,5 @@ let sum : number = 0;
 
 while (i <= n){   
     sum = sum + 1  
-    i++
+    i++;
 }

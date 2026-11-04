@@ -13,4 +13,4 @@ while (i <= n){    // Keep going until i becomes greater than n
     i++
 }
 
-console.log(`The sum of all even numbers from 1 to ${n} is: ${sum}`);
+console.log(`The sum of all even numbers from 1 to ${n} is: ${sum}`)

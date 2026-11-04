@@ -10,4 +10,4 @@ while (num > 0){
     product = product * digit; // Old product * current digit
     num = Math.floor(num / 10); // Remove the last digit from the number
 }
-console.log(`The product of all digits of ${num} is: ${product}`);
+console.log(`The product of all digits of ${num} is: ${product}`)

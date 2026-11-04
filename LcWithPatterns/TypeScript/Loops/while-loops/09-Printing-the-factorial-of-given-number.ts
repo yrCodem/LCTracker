@@ -10,4 +10,4 @@ while (i <= n){ // Keep going until i becomes greater than n
     factorial = factorial * i; // Old factorial * current number i
     i++;
 }
-console.log(`The factorial of ${n} is: ${factorial}`);
+console.log(`The factorial of ${n} is: ${factorial}`)
