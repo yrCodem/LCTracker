@@ -1,9 +1,9 @@
 import java.util.*;
 
 class Solution {
-    public long sumOfSquares(int n) {
-        long sum = 0;
-        for (long i = 1; i <= n; i++) {
+    public int calculateSum(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
             sum += i * i;
         }
         return sum;
