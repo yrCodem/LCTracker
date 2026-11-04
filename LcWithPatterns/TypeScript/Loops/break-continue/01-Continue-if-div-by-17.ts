@@ -5,5 +5,5 @@ for (let i: number = 1; i <= n; i++){
     if (i % 17 === 0){
         continue
     }
-    console.log(i);
+    console.log(i)
 }
