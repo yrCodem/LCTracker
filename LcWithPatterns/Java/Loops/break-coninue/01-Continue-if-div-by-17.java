@@ -1,0 +1,12 @@
+import java.util.*;
+
+class Solution {
+    public void solve() {
+        int n = 100;
+        for (int i = 1; i <= n; i++) {
+            if (i % 17 == 0) {
+                continue;
+            }
+        }
+    }
+}
