@@ -3,7 +3,7 @@ function maxNumberOfBalloons(text: string): number {
 
     for(const char of text){
         if (char in counts){
-            counts[char as keyof typeof counts]++;
+            counts[char as keyof typeof counts]++
         }
     }
 

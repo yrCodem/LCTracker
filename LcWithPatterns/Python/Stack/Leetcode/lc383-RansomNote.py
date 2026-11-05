@@ -9,5 +9,5 @@ def canConstruct(ransomNote: str, magazine: str) -> bool:
         if count == 0:
             return False
         charConstructMagazine[char] = count - 1
-
+        
     return True
