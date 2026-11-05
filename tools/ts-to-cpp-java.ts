@@ -132,7 +132,6 @@ ${sourceCode}
 `;
 }
 
-
 function parseGeneratedCode(responseText: string): {
     cpp: string;
     java: string;
@@ -162,11 +161,65 @@ function parseGeneratedCode(responseText: string): {
         );
     }
 
+    let cpp = parsed.cpp.trim();
+    let java = parsed.java.trim();
+
+    // Fix malformed C++ header: #bits/stdc++.h>
+    cpp = cpp.replace(
+        /^#\s*bits\/stdc\+\+\.h>/m,
+        "#include <bits/stdc++.h>"
+    );
+
+    // Ensure the C++ standard namespace is available.
+    if (
+        cpp.includes("#include <bits/stdc++.h>") &&
+        !cpp.includes("using namespace std;")
+    ) {
+        cpp = cpp.replace(
+            "#include <bits/stdc++.h>",
+            "#include <bits/stdc++.h>\nusing namespace std;"
+        );
+    }
+
     return {
-        cpp: parsed.cpp.trim(),
-        java: parsed.java.trim(),
+        cpp,
+        java,
     };
 }
+// function parseGeneratedCode(responseText: string): {
+//     cpp: string;
+//     java: string;
+// } {
+//     const cleanedResponse = responseText
+//         .trim()
+//         .replace(/^```(?:json)?\s*/i, "")
+//         .replace(/\s*```$/, "");
+
+//     const start = cleanedResponse.indexOf("{");
+//     const end = cleanedResponse.lastIndexOf("}");
+
+//     if (start === -1 || end === -1 || end <= start) {
+//         throw new Error("Gemini did not return valid JSON.");
+//     }
+
+//     const parsed = JSON.parse(
+//         cleanedResponse.slice(start, end + 1)
+//     );
+
+//     if (
+//         typeof parsed.cpp !== "string" ||
+//         typeof parsed.java !== "string"
+//     ) {
+//         throw new Error(
+//             "Gemini response must contain both cpp and java strings."
+//         );
+//     }
+
+//     return {
+//         cpp: parsed.cpp.trim(),
+//         java: parsed.java.trim(),
+//     };
+// }
 
 
 async function validateCpp(filePath: string): Promise<boolean> {
