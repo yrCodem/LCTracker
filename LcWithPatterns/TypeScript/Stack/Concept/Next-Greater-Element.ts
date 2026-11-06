@@ -9,6 +9,7 @@
 // Output:
 // [5, 10, 10, -1, -1]
 
+export{};
 
 function nextGreaterElement(arr: number[]): number[] {
     const n: number = arr.length;

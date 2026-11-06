@@ -1,11 +1,6 @@
 "use strict";
 // Given an array, find the next greater element for every element.
-// The next greater element is the first element to the right that is strictly greater than the current element.
-// Example:
-// Input:
-// [4, 5, 2, 10, 8]
-// Output:
-// [5, 10, 10, -1, -1]
+Object.defineProperty(exports, "__esModule", { value: true });
 function nextGreaterElement(arr) {
     const n = arr.length;
     const stack = [];
