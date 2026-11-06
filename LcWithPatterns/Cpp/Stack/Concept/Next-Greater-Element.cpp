@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 class Solution {
@@ -13,11 +12,14 @@ public:
             while (!stack.empty() && stack.back() <= arr[i]) {
                 stack.pop_back();
             }
+
             if (!stack.empty()) {
                 result[i] = stack.back();
             }
+
             stack.push_back(arr[i]);
         }
+
         return result;
     }
 };

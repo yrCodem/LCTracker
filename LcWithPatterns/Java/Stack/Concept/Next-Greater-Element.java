@@ -3,19 +3,22 @@ import java.util.*;
 class Solution {
     public int[] nextGreaterElement(int[] arr) {
         int n = arr.length;
-        List<Integer> stack = new ArrayList<>();
+        Deque<Integer> stack = new ArrayDeque<>();
         int[] result = new int[n];
         Arrays.fill(result, -1);
 
         for (int i = n - 1; i >= 0; i--) {
-            while (!stack.isEmpty() && stack.get(stack.size() - 1) <= arr[i]) {
-                stack.remove(stack.size() - 1);
+            while (!stack.isEmpty() && stack.peek() <= arr[i]) {
+                stack.pop();
             }
+
             if (!stack.isEmpty()) {
-                result[i] = stack.get(stack.size() - 1);
+                result[i] = stack.peek();
             }
-            stack.add(arr[i]);
+
+            stack.push(arr[i]);
         }
+
         return result;
     }
 }
