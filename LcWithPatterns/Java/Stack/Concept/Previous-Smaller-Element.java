@@ -8,15 +8,15 @@ class Solution {
         Arrays.fill(result, -1);
 
         for (int i = 0; i < n; i++) {
-            while (!stack.isEmpty() && stack.peekLast() >= arr[i]) {
-                stack.pollLast();
+            while (!stack.isEmpty() && stack.peek() >= arr[i]) {
+                stack.pop();
             }
 
             if (!stack.isEmpty()) {
-                result[i] = stack.peekLast();
+                result[i] = stack.peek();
             }
 
-            stack.addLast(arr[i]);
+            stack.push(arr[i]);
         }
 
         return result;

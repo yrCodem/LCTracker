@@ -16,10 +16,10 @@ function previousSmallerElement(arr: number[]): number[] {
         }
 
         if (stack.length > 0) {
-            result[i] = stack[stack.length - 1];
+            result[i] = stack[stack.length - 1]
         }
 
-        stack.push(arr[i]);
+        stack.push(arr[i])
     }
 
     return result;
