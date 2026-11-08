@@ -21,4 +21,4 @@ function reverseString(s: string): string{
     }
     return result
 }
-console.log(reverseString("hello"));
+console.log(reverseString("hello"))
