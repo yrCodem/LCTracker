@@ -1,5 +1,5 @@
 function maxNumberOfBalloons(text: string): number {
-   const counts = { b: 0, a: 0, l: 0, o: 0, n: 0 };
+   const counts = { b: 0, a: 0, l: 0, o: 0, n: 0 }
 
     for(const char of text){
         if (char in counts){
