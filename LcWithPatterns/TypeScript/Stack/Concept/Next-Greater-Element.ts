@@ -2,7 +2,6 @@
 
 // The next greater element is the first element to the right that is strictly greater than the current element.
 
-// Example:
 // Input:
 // [4, 5, 2, 10, 8]
 
