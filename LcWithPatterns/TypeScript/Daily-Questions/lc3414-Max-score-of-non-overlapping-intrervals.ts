@@ -15,7 +15,6 @@ function maximumWeight(intervals: number[][]): number[] {
     
     items.sort((a, b) => a.start - b.start || a.end - b.end);
 
-    // 2. Precompute the next valid non-overlapping interval for every item using Binary Search
     const nextValid = new Int32Array(n);
     for (let i = 0; i < n; i++) {
         let low = i + 1;
