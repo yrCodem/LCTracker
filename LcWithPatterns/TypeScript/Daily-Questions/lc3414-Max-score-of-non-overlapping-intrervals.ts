@@ -44,7 +44,6 @@ function maximumWeight(intervals: number[][]): number[] {
         return a.length < b.length;
     }
 
-    // 4. Recursive DP with memoization
     function solve(i: number, count: number): DPState {
         if (count === 0 || i === n) {
             return { weight: 0, indices: [] };
