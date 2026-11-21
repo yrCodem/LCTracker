@@ -8,7 +8,6 @@ function maximumWeight(intervals) {
         id: idx
     }));
     items.sort((a, b) => a.start - b.start || a.end - b.end);
-    // 2. Precompute the next valid non-overlapping interval for every item using Binary Search
     const nextValid = new Int32Array(n);
     for (let i = 0; i < n; i++) {
         let low = i + 1;
@@ -36,7 +35,6 @@ function maximumWeight(intervals) {
         }
         return a.length < b.length;
     }
-    // 4. Recursive DP with memoization
     function solve(i, count) {
         if (count === 0 || i === n) {
             return { weight: 0, indices: [] };
