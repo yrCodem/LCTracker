@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
 class Solution {
@@ -31,7 +30,9 @@ public:
                 break;
             }
 
-            swap(heap[smallest], heap[index]);
+            int temp = heap[smallest];
+            heap[smallest] = heap[index];
+            heap[index] = temp;
             index = smallest;
         }
     }

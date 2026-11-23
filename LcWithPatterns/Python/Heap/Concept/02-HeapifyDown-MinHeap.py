@@ -6,7 +6,7 @@ def HeapifyDown(heap: list[int], index: int) -> None:
         right = 2 * index + 2
 
         smallest = index
-        
+
         if (
             left < n and
             heap[left] < heap[smallest]
@@ -15,7 +15,7 @@ def HeapifyDown(heap: list[int], index: int) -> None:
 
         if (
             right < n and
-            heap[right] < heap[smallest] 
+            heap[right] < heap[smallest]
         ):
             smallest = right
 
